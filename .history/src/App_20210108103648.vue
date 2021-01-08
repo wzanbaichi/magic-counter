@@ -9,6 +9,7 @@ import XLSX from 'xlsx'
 
 export default {
   name: 'App',
+
   methods: {
     readFile(e) {
       function readWorkbookFromLocalFile(file, callback) {
