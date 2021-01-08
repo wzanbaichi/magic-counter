@@ -1,0 +1,17 @@
+#container {
+  display: flex;
+  min-height: 100%;
+
+  .menu {
+    /deep/ .at-menu {
+      height: 100%;
+    }
+
+    .copy-right {
+      position: fixed;
+    }
+  }
+  .content {
+    min-height: 100%;
+  }
+}

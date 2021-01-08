@@ -1,0 +1,12 @@
+<template>
+  <div>
+    asdasds
+  </div>
+</template>
+<script>
+import XLSX from 'xlsx'
+export default {
+  name:'BasePage',
+  methods
+}
+</script>

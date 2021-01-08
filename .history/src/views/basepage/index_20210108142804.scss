@@ -1,0 +1,13 @@
+#container {
+  display: flex;
+  min-height: 100%;
+
+  .menu {
+    /deep/ .at-menu {
+      height: 100%;
+    }
+  }
+  .content {
+    min-height: 100%;
+  }
+}

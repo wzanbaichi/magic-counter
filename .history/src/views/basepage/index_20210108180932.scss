@@ -1,0 +1,22 @@
+#container {
+  display: flex;
+  min-height: 100%;
+
+  .menu {
+    position: relative;
+    /deep/ .at-menu {
+      height: 100%;
+    }
+
+    .copy-right {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+  .content {
+    min-height: 100%;
+    margin: 34px;
+  }
+}
