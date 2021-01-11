@@ -199,10 +199,10 @@ export default {
         }
       )
       this.qkAndBqkSum = qkAndBqkData.reduce((prev, next) => add(prev, next))
-      this.tfjeSum = tfjeData.reduce((prev, next) => add(prev, next))
-      this.revenueSum = revenueData.reduce((prev, next) => add(prev, next))
-      this.zcjeSum = zcjeData.reduce((prev, next) => add(prev, next))
-      this.zrjeSum = zrjeData.reduce((prev, next) => add(prev, next))
+      this.tfjeSum = tfjeData.reduce((prev, next) => add(prev, next)).toFixed(2)
+      this.revenueSum = revenueData.reduce((prev, next) => add(prev, next)).toFixed(2)
+      this.zcjeSum = zcjeData.reduce((prev, next) => add(prev, next)).toFixed(2)
+      this.zrjeSum = zrjeData.reduce((prev, next) => add(prev, next)).toFixed(2)
       this.lbtjSum = lbtjData.reduce((prev, next) => add(prev, next))
       this.dptjSum = dptjData.reduce((prev, next) => add(prev, next))
       /**

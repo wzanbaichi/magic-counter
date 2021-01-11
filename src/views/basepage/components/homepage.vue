@@ -4,7 +4,7 @@
       <at-button
         type="primary"
         @click="handleUploadFiles"
-      >上传文件</at-button>
+      >分析文件</at-button>
       <p class="tips">点击按钮上传文件，请上传正确的xlsx文件！</p>
     </div>
 
@@ -80,7 +80,8 @@ export default {
       bookData: {},
       monthList: [],
       sheetsListData: [],
-      monthDataNumberData: {}
+      monthDataNumberData: {},
+      uploadLock: false //选择文件按钮防抖锁
     }
   },
   computed: {
@@ -132,9 +133,14 @@ export default {
   },
   methods: {
     handleUploadFiles() {
+      if (this.uploadLock) {
+        return
+      }
+      this.uploadLock = true
       const input = document.createElement('input')
       input.type = 'file'
       input.click()
+      this.uploadLock = false
       input.addEventListener('change',
         (e) => {
           const file = e.target.files[0]
@@ -165,6 +171,9 @@ export default {
         reader.readAsBinaryString(file);
       }
     },
+    /**
+     * 重新计算按钮
+     */
     reCount() {
       this.$store.commit('app/SET_COUNTER_PARAMS', JSON.parse(JSON.stringify(this.counterParams)))
       this.$Notify({
